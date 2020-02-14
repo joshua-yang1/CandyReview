@@ -4,6 +4,7 @@ using System.Text;
 using Xunit;
 using Microsoft.AspNetCore.Mvc;
 using CandyReview.Controllers;
+using CandyReview.Models;
 
 namespace CandyReview.Tests
 {
