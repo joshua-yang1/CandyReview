@@ -27,8 +27,7 @@ namespace CandyReview.Tests
 
             var result = controller.Index();
 
-            Assert.IsType<ProductModel>(result.Model);
-
+            Assert.IsAssignableFrom<IEnumerable<ProductModel>>(result.Model);
         }
     }
 
