@@ -5,7 +5,9 @@ using System.Threading.Tasks;
 
 namespace CandyReview.Repositories
 {
-    public class IRepository
+    public interface IRepository<T> where T : class
     {
+        IEnumerable<T> GetAll();
+        //T GetByID(int id);
     }
 }

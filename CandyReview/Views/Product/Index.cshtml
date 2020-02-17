@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<CandyReview.Models.ProductModel>
 @{
     Layout = null;
 }
@@ -11,6 +11,12 @@
     <title>Index</title>
 </head>
 <body>
-    <p>products</p>
+    <h1>Our Selection of Candies</h1>
+    @foreach(var product in Model)
+    {
+        <h3>Name: @product.Name</h3>
+        <p>Category: @product.Category</p>
+        <hr />
+    }
 </body>
 </html>

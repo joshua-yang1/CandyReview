@@ -22,9 +22,9 @@ namespace CandyReview.Repositories
         {
             return productDictionary.Values;
         }
-        public ProductModel GetById(int id)
-        {
-            return null;
-        }
+        //public ProductModel GetById(int id)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using CandyReview.Models;
+using CandyReview.Repositories;
 
 namespace CandyReview.Controllers
 {
@@ -11,7 +12,8 @@ namespace CandyReview.Controllers
     {
         public ViewResult Index()
         {
-            var model = new ProductModel();
+            ProductRepository productRepo = new ProductRepository();
+            var model = productRepo.GetAll();
             return View(model);
         }
     }
