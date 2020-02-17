@@ -1,0 +1,19 @@
+﻿@model CandyReview.Models.ProductModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <h3>@Model.Name</h3>
+    <p>@Model.Category</p>
+    <p>@Model.Review</p>
+    <a href="/Product/Index">Return to Product List</a>
+</body>
+</html>
