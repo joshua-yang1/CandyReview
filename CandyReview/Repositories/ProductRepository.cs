@@ -2,29 +2,27 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CandyReview.Data;
 using CandyReview.Models;
 
 namespace CandyReview.Repositories
 {
     public class ProductRepository : IRepository<ProductModel>
     {
-        public Dictionary<int, ProductModel> productDictionary;
-        public ProductRepository()
+        private CandyContext db;
+        public ProductRepository(CandyContext db)
         {
-            productDictionary = new Dictionary<int, ProductModel>()
-            {
-                { 1, new ProductModel(1, "jawbreakers", "hard candy", "meh") },
-                { 2, new ProductModel(2, "KitKats", "chocolate", "gimme a break") },
-                { 3, new ProductModel(3, "reese's egg", "chocolate", "does not have an EGG to stand on") }
-            };
+            this.db = db;
         }
+
+
         public IEnumerable<ProductModel> GetAll()
         {
-            return productDictionary.Values;
+            return db.Products;
         }
         public ProductModel GetById(int id)
         {
-            return productDictionary[id];
+            return db.Products.Single(p => p.Id == id);
         }
     }
 }
