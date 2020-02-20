@@ -13,6 +13,9 @@ namespace CandyReview.Models
             public int Rating { get; set; }
             public string Date { get; set; }
 
+        public virtual ProductModel Product { get; set; }
+        public virtual int ProductId { get; set; }
+
         public ReviewModel()
         {
 

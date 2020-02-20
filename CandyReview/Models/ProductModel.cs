@@ -13,19 +13,21 @@ namespace CandyReview.Models
 
         public string Category { get; set; }
 
-        public string Review { get; set; }
+        //public string Review { get; set; }
+
+        public virtual ICollection<ReviewModel> Reviews { get; set; }
 
         public ProductModel()
         {
 
         }
 
-        public ProductModel(int id, string name, string category, string review)
+        public ProductModel(int id, string name, string category) //string review)
         {
             Id = id;
             Name = name;
             Category = category;
-            Review = review;
+            //Review = review;
         }
     }
 

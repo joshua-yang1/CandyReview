@@ -9,7 +9,8 @@ namespace CandyReview.Data
 {
     public class CandyContext : DbContext
     {
-        public DbSet<ReviewModel> Reviews { get; set; } 
+        public DbSet<ReviewModel> Reviews { get; set; }
+        public DbSet<ProductModel> Products { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -19,6 +20,34 @@ namespace CandyReview.Data
                 .UseLazyLoadingProxies();
 
             base.OnConfiguring(optionsBuilder);
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<ProductModel>().HasData(
+                new ProductModel()
+                {
+                    Id = 1,
+                    Name = "Swedish Fish",
+                    Category = "Chewy"
+                },
+
+                new ProductModel()
+                {
+                    Id = 2,
+                    Name = "Starburst",
+                    Category = "Chewy"
+                },
+
+                new ProductModel()
+                {
+                    Id = 3,
+                    Name = "Heath Bar",
+                    Category = "Chocolate"
+                });
+
+            base.OnModelCreating(modelBuilder);
+
         }
     }
 }
