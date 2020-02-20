@@ -27,7 +27,7 @@ namespace CandyReview
         {
             services.AddMvc();
             services.AddDbContext<CandyContext>();
-            services.AddScoped <IRepository<ProductModel>, ProductRepository>();
+            services.AddScoped<IRepository<ProductModel>, ProductRepository>();
             services.AddScoped<IRepository<ReviewModel>, ReviewRepository>();
         }
 

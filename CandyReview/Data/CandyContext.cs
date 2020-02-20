@@ -46,7 +46,7 @@ namespace CandyReview.Data
                     Category = "Chocolate"
                 });
 
-            ModelBuilder.Entity<ReviewModel>().HasData(
+            modelBuilder.Entity<ReviewModel>().HasData(
 
                 new ReviewModel()
                 {
