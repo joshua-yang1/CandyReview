@@ -24,5 +24,9 @@ namespace CandyReview.Controllers
             return View(model);
         }
 
+        public ViewResult Create()
+        {
+            return View();
+        }
     }
 }
