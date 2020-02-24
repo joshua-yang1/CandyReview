@@ -17,11 +17,12 @@
 
     @foreach (var review in Model.Reviews)
     {
-        <p>Candy: @review.Product.Name</p>
+        //<p>Candy: @review.Product.Name</p>
         <p>Content: @review.Content</p>
         <p>Reviewer: @review.Reviewer</p>
         <p>Rating: @review.Rating</p>
         <p>Date: @review.Date</p>
+        <a href="/Review/Update/@Model.Id">Edit Review</a>
     }
 
     <a href="/Review/Create ">Create a review</a>

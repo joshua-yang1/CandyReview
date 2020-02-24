@@ -28,5 +28,10 @@ namespace CandyReview.Repositories
         {
             return db.Products.Single(p => p.Id == id);
         }
+
+        public void Update(ProductModel obj)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

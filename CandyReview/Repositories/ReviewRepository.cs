@@ -29,5 +29,11 @@ namespace CandyReview.Repositories
         {
             return db.Reviews.Single(p => p.Id == id);
         }
+
+        public void Update(ReviewModel review)
+        {
+            db.Reviews.Update(review);
+            db.SaveChanges();
+        }
     }
 }
