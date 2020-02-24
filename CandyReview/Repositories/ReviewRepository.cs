@@ -15,6 +15,11 @@ namespace CandyReview.Repositories
             this.db = db;
         }
 
+        public void Create(ReviewModel review)
+        {
+            db.Reviews.Add(review);
+            db.SaveChanges();
+        }
 
         public IEnumerable<ReviewModel> GetAll()
         {
