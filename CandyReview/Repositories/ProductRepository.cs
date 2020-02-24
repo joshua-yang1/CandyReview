@@ -15,6 +15,10 @@ namespace CandyReview.Repositories
             this.db = db;
         }
 
+        public void Create(ProductModel obj)
+        {
+            throw new NotImplementedException();
+        }
 
         public IEnumerable<ProductModel> GetAll()
         {

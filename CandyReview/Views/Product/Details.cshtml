@@ -13,8 +13,19 @@
 <body>
     <h3>@Model.Name</h3>
     <p>@Model.Category</p>
-    <a href="/Review/Index">See All Reviews</a>
-    
+    @*<a href="/Review/Index">See All Reviews</a>*@
+
+    @foreach (var review in Model.Reviews)
+    {
+        <p>Candy: @review.Product.Name</p>
+        <p>Content: @review.Content</p>
+        <p>Reviewer: @review.Reviewer</p>
+        <p>Rating: @review.Rating</p>
+        <p>Date: @review.Date</p>
+    }
+
+    <a href="/Review/Create ">Create a review</a>
+
     <a href="/Product/Index">Return to Product List</a>
 </body>
 </html>
