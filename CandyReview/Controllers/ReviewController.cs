@@ -33,7 +33,7 @@ namespace CandyReview.Controllers
         public ActionResult Create(ReviewModel review)
         {
             reviewRepo.Create(review);
-            return RedirectToAction("Details");
+            return RedirectToAction("Details", "Product", new { id = review.ProductId });
         }
 
 
