@@ -28,15 +28,25 @@ namespace CandyReview.Controllers
         {
             return View();
         }
-       
+
         [HttpPost]
         public ActionResult Create(ReviewModel review)
         {
             reviewRepo.Create(review);
             return RedirectToAction("Details", "Product", new { id = review.ProductId });
         }
-
-
+        [HttpGet]
+        public ViewResult Update(int id)
+        {
+            ReviewModel model = reviewRepo.GetById(id);
+            return View(model);
+        }
+        [HttpPost]
+        public ActionResult Update(ReviewModel review)
+        {
+            reviewRepo.Update(review);
+            return RedirectToAction("Details", "Product", new { id = review.ProductId });
+        }
 
     }
 }
