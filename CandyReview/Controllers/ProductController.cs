@@ -10,10 +10,15 @@ namespace CandyReview.Controllers
 {
     public class ProductController : Controller
     {
+        IRepository<ProductModel> productRepo;
+
+        public ProductController(IRepository<ProductModel> productRepo)
+        {
+            this.productRepo = productRepo;
+        }
+
         public ViewResult Index()
         {
-            ProductRepository productRepo = new ProductRepository();
-
             var model = productRepo.GetAll();
 
             return View(model);
@@ -21,8 +26,6 @@ namespace CandyReview.Controllers
 
         public ViewResult Details(int id)
         {
-            ProductRepository productRepo = new ProductRepository();
-
             ProductModel model = productRepo.GetById(id);
 
             return View(model);

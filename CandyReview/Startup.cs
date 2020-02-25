@@ -8,6 +8,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Configuration;
+using CandyReview.Data;
+using CandyReview.Repositories;
+using CandyReview.Models;
 
 namespace CandyReview
 {
@@ -23,6 +26,9 @@ namespace CandyReview
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddDbContext<CandyContext>();
+            services.AddScoped<IRepository<ProductModel>, ProductRepository>();
+            services.AddScoped<IRepository<ReviewModel>, ReviewRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
