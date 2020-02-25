@@ -20,6 +20,11 @@ namespace CandyReview.Repositories
             throw new NotImplementedException();
         }
 
+        public void Delete(ProductModel obj)
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<ProductModel> GetAll()
         {
             return db.Products;

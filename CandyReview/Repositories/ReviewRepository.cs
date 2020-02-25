@@ -21,6 +21,12 @@ namespace CandyReview.Repositories
             db.SaveChanges();
         }
 
+        public void Delete(ReviewModel review)
+        {
+            db.Reviews.Remove(review);
+            db.SaveChanges();
+        }
+
         public IEnumerable<ReviewModel> GetAll()
         {
             return db.Reviews;
