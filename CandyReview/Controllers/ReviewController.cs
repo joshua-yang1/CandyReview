@@ -47,6 +47,19 @@ namespace CandyReview.Controllers
             reviewRepo.Update(review);
             return RedirectToAction("Details", "Product", new { id = review.ProductId });
         }
+        [HttpGet]
+        public ViewResult Delete(int id)
+        {
+            ReviewModel model = reviewRepo.GetById(id);
+            return View(model);
+        }
+        [HttpPost]
+        public ActionResult Delete(ReviewModel review)
+        {
+            var prodId = review.ProductId;
+            reviewRepo.Delete(review);
+            return RedirectToAction("Details", "Product", new { id = prodId});
+        }
 
     }
 }
