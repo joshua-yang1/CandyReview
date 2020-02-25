@@ -1,4 +1,17 @@
-﻿body {
+﻿* {
+    box-sizing: border-box;
+    line-height: 1.618em;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 14px;
+}
+
+
+
+body {
     background-image: url(/img/background2.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -6,8 +19,9 @@
     background-size: cover;
 }
 
+
+
 header {
-    margin: 2em auto;
     text-align: center;
     font-family: 'Lobster';
 }
@@ -15,15 +29,33 @@ header {
 h1 {
     font-size: 5em;
     letter-spacing: 5px;
-    margin: 20px auto;
+    margin: 20px auto 0 auto;
 }
 
-main {
+header, footer, main {
     max-width: 750px;
     margin: 2em auto;
+}
+
+
+
+footer{
+    text-align: center;
+}
+
+section {
     background-color: rgba(237, 110, 133, .65);
     padding: 2.5em;
     text-align: center;
     border-radius: 25px;
     font-family: 'Cantarell';
+    border: 1px solid black;
+    margin: 2em;
 }
+
+ul li{
+    list-style: none;
+}
+
+
+
