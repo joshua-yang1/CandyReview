@@ -57,5 +57,12 @@ ul li{
     list-style: none;
 }
 
+button{
+    background-color: #ffe174;
+    border: none;
+    padding: 12px 28px;
+    margin-top: 2em;
+    border-radius: 8px;
+}
 
 
