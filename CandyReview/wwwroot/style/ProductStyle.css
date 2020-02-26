@@ -15,6 +15,14 @@ body {
     grid-column-gap: 1.25em;
 }
 
-h1{
+.header-image{
+    width: 100%;
+    height: 100px;
+    background: url(/img/CroppedHeader.jpg);
+    background-size: cover;
+}
 
+h1{
+    text-align: left;
+    padding: 1em 0em 1em 1.5em;
 }
