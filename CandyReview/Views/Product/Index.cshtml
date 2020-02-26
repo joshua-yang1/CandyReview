@@ -9,17 +9,21 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
+    <link href="~/style/ProductStyle.css" rel="stylesheet" />
 </head>
 <body>
     <h1>Our Selection of Candies</h1>
-    @foreach(var product in Model)
-    {
-        <h3>Name: @product.Name</h3>
-        <p>Category: @product.Category</p>
-        <a href="/Product/Details/@product.Id">Details</a>
-        <hr />
-    }
+    <div id="products">
+        @foreach (var product in Model)
+        {
+            <article>
+                <h3>Name: @product.Name</h3>
+                <p>Category: @product.Category</p>
+                <a href="/Product/Details/@product.Id">Details</a>
+            </article>
+        }
+    </div>
 
-      <a href="/Home/Index">go back home bro</a>
+      <a href="/Home/Index">Return Home</a>
 </body>
 </html>

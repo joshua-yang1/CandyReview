@@ -1,0 +1,20 @@
+﻿*{
+    text-align: center;
+    line-height: 1.618em;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    
+}
+
+#products{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1.25em;
+}
+
+h1{
+
+}
