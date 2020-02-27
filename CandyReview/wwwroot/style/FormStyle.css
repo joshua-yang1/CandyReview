@@ -6,21 +6,30 @@
     font-family: 'Cantarell';
 }
 
-form {
+.formContainer {
     display: grid;
     grid-template-rows: auto;
     grid-row-gap: 1em;
     text-align: right;
     justify-content: center;
-    margin: 2.5em 25em;
+    margin: 2.5em 30vw;
     border: 2px solid #555;
     padding: 1.5em 0;
     border-radius: 25px;
     background-color: rgba(107, 78, 113, .5);
 }
 
+.deleteGroup{
+    text-align:center;
+}
+
+.form-group input{
+    
+}
+
 body {
     background-color: #EBEDF1;
+    text-align: center;
 }
 
 .header-image {
@@ -43,7 +52,10 @@ h1 {
     padding: 12px 28px;
     border-radius: 8px;
 }
-
-a {
-    text-align: center;
+button {
+    background-color: #ffe174;
+    border: 1px solid black;
+    padding: 12px 28px;
+    margin: 2em 1em;
+    border-radius: 8px;
 }

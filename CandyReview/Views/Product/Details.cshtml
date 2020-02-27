@@ -10,23 +10,30 @@
     <meta name="viewport" content="width=device-width" />
     <title>Details</title>
     <link href="~/style/ProductStyle.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Cantarell|Lobster&display=swap" rel="stylesheet">
 
 </head>
 <body>
-    <h3>@Model.Name</h3>
-    <p>@Model.Category</p>
-    @*<a href="/Review/Index">See All Reviews</a>*@
+    <div class="header-image"><h1>@Model.Name | @Model.Category</h1></div>
 
-    @foreach (var review in Model.Reviews)
-    {
-        //<p>Candy: @review.Product.Name</p>
-        <p>Name: @review.Reviewer</p>
-        <p>Review: @review.Content</p>
-        <p>Rating: @review.Rating</p>
-        <p>Date: @review.Date</p>
-        <a href="/Review/Update/@review.Id">Edit Review</a>
-        <a href="/Review/Delete/@review.Id">Delete Review</a>
-    }
+
+
+    <article id="productImg">
+        <img src="~/img/@Model.Image" alt="@Model.Name" />
+    </article>
+    <div id="reviews">
+        @foreach (var review in Model.Reviews)
+        {
+        <article>
+            <p>Name: @review.Reviewer</p>
+            <p>Review: @review.Content</p>
+            <p>Rating: @review.Rating</p>
+            <p>Date: @review.Date</p>
+            <a href="/Review/Update/@review.Id">Edit Review</a>
+            <a href="/Review/Delete/@review.Id">Delete Review</a>
+        </article>
+        }
+    </div>
 
     <a href="/Review/Create">Create a review</a>
 
