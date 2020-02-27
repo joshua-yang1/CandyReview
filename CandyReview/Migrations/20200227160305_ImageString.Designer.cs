@@ -3,14 +3,16 @@ using CandyReview.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CandyReview.Migrations
 {
     [DbContext(typeof(CandyContext))]
-    partial class CandyContextModelSnapshot : ModelSnapshot
+    [Migration("20200227160305_ImageString")]
+    partial class ImageString
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -43,21 +45,21 @@ namespace CandyReview.Migrations
                         {
                             Id = 1,
                             Category = "Marshmallow",
-                            Image = "peeps.jpg",
+                            Image = "~/img/peeps.jpg",
                             Name = "Peeps"
                         },
                         new
                         {
                             Id = 2,
                             Category = "Sour",
-                            Image = "sourpatchkids.jpg",
+                            Image = "~/img/sourpatchkids.jpg",
                             Name = "Sour Patch Kids"
                         },
                         new
                         {
                             Id = 3,
                             Category = "Chocolate",
-                            Image = "hersheykisses.jpg",
+                            Image = "~/img/hersheykisses.jpg",
                             Name = "Hershey's Kisses"
                         });
                 });

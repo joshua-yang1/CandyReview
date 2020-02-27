@@ -28,22 +28,25 @@ namespace CandyReview.Data
                 new ProductModel()
                 {
                     Id = 1,
-                    Name = "Swedish Fish",
-                    Category = "Chewy"
+                    Name = "Peeps",
+                    Category = "Marshmallow",
+                    Image = "peeps.jpg"
                 },
 
                 new ProductModel()
                 {
                     Id = 2,
-                    Name = "Starburst",
-                    Category = "Chewy"
+                    Name = "Sour Patch Kids",
+                    Category = "Sour",
+                    Image = "sourpatchkids.jpg"
                 },
 
                 new ProductModel()
                 {
                     Id = 3,
-                    Name = "Heath Bar",
-                    Category = "Chocolate"
+                    Name = "Hershey's Kisses",
+                    Category = "Chocolate",
+                    Image = "hersheykisses.jpg"
                 });
 
             modelBuilder.Entity<ReviewModel>().HasData(
@@ -51,60 +54,60 @@ namespace CandyReview.Data
                 new ReviewModel()
                 {
                     Id = 1,
-                    Content = "Review",
-                    Reviewer = "Corleeone",
-                    Rating = 3,
-                    Date = "july 32nd, 2020",
+                    Content = "Why wouldn't you just eat a marshmallow..? Peeps make for a very fun s'more though.",
+                    Reviewer = "Josh",
+                    Rating = 5,
+                    Date = "2/26/20",
                     ProductId = 1
                 },
 
                   new ReviewModel()
                   {
                     Id = 2,
-                    Content = "Review",
-                    Reviewer = "Jake",
-                    Rating = 2,
-                    Date = "January 1st, 1893",
+                    Content = "God awful. Please do not spend money on these.",
+                    Reviewer = "Rhianna",
+                    Rating = 1,
+                    Date = "2/26/20",
                     ProductId = 1
                   },
 
                   new ReviewModel()
                   {
                     Id = 3,
-                    Content = "Review",
-                    Reviewer = "Jackie Fredrickson",
-                    Rating = 1,
-                    Date = "THE END TIMES",
+                    Content = "They are the perfect combination of chewy and sour",
+                    Reviewer = "Tatyana",
+                    Rating = 4,
+                    Date = "2/26/20",
                     ProductId = 2
                   },
 
                   new ReviewModel()
                   {
                     Id = 4,
-                    Content = "Review",
-                    Reviewer = "Becky with the good hair",
-                    Rating = 47,
-                    Date = "33 BC",
+                    Content = "First, they're sour. Then, they're sweet.",
+                    Reviewer = "Rob",
+                    Rating = 5,
+                    Date = "2/26/20",
                     ProductId = 2
                   },
 
                   new ReviewModel()
                   {
                     Id = 5,
-                    Content = "Review",
-                    Reviewer = "Johnny Pearseed",
-                    Rating = 0,
-                    Date = "Day 1",
+                    Content = "I mean, it's chocolate. You can't really go wrong here.",
+                    Reviewer = "Josh",
+                    Rating = 4,
+                    Date = "2/26/20",
                     ProductId = 3
                   },
 
                   new ReviewModel()
                   {
                     Id = 6,
-                    Content = "Review",
-                    Reviewer = "Harriet Tubman",
+                    Content = "I find myself accidentally eating the entire bag. Chocolate is always A+",
+                    Reviewer = "Rhianna",
                     Rating = 5,
-                    Date = "Decemberuary 4th, 3112",
+                    Date = "2/26/20",
                     ProductId = 3
                   }) ;
 
