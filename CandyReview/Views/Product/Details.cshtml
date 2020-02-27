@@ -18,25 +18,25 @@
 
 
 
+    <div id="reviews">
     <article id="productImg">
         <img src="~/img/@Model.Image" alt="@Model.Name" />
     </article>
-    <div id="reviews">
         @foreach (var review in Model.Reviews)
         {
-        <article>
+        <article id="reviewItem">
             <p>Name: @review.Reviewer</p>
             <p>Review: @review.Content</p>
             <p>Rating: @review.Rating</p>
             <p>Date: @review.Date</p>
-            <a href="/Review/Update/@review.Id">Edit Review</a>
-            <a href="/Review/Delete/@review.Id">Delete Review</a>
+            <a href="/Review/Update/@review.Id"><button>Edit Review</button></a>
+            <a href="/Review/Delete/@review.Id"><button>Delete Review</button></a>
         </article>
         }
     </div>
 
-    <a href="/Review/Create">Create a review</a>
+    <a href="/Review/Create"><button>Create a review</button></a>
 
-    <a href="/Product/Index">Return to Product List</a>
+    <a href="/Product/Index"><button>Return to Product List</button></a>
 </body>
 </html>
