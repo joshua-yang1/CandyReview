@@ -8,18 +8,25 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <title>List of Candies</title>
+    <link href="https://fonts.googleapis.com/css?family=Cantarell|Lobster&display=swap" rel="stylesheet">
+
+    <link href="~/style/ProductStyle.css" rel="stylesheet" />
 </head>
 <body>
-    <h1>Our Selection of Candies</h1>
-    @foreach(var product in Model)
-    {
-        <h3>Name: @product.Name</h3>
-        <p>Category: @product.Category</p>
-        <a href="/Product/Details/@product.Id">Details</a>
-        <hr />
-    }
-
-      <a href="/Home/Index">go back home bro</a>
+    <div class="header-image"><h1>Our Selection of Candies</h1></div>
+    <div id="products">
+        @foreach (var product in Model)
+        {
+            <article>
+                <img src="~/img/@product.Image" alt="@product.Name" />
+                <h3>@product.Name</h3>
+                <p>Category: @product.Category</p>
+                <a href="/Product/Details/@product.Id"><button id="detailsButton">Details</button></a>
+            </article>
+        }
+    </div>
+    <a href="/Review/Create"><button>Create a Review</button></a>
+    <a href="/Home/Index"><button>Return Home</button></a>
 </body>
 </html>
