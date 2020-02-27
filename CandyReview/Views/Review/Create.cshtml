@@ -5,59 +5,67 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Write A Review</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Write A Review</title>
+    <link href="~/style/FormStyle.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Cantarell|Lobster&display=swap" rel="stylesheet">
 
-<h4>Please fill out the following information:</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-            <div class="form-group">
-                <label asp-for="ProductId" class="control-label">Select a Candy:</label>
-                @*<input asp-for="ProductId" class="form-control" />
-                <span asp-validation-for="ProductId" class="text-danger"></span>*@
-                <select name="ProductId">
-                    <option value="1">Peeps</option>
-                    <option value="2">Sour Patch Kids</option>
-                    <option value="3">Hershey's Kisses</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label asp-for="Reviewer" class="control-label">Name:</label>
-                <input asp-for="Reviewer" class="form-control" />
-                <span asp-validation-for="Reviewer" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Content" class="control-label">Review: </label>
-                <input asp-for="Content" class="form-control" />
-                <span asp-validation-for="Content" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Rating" class="control-label"></label>
-                <input asp-for="Rating" class="form-control" />
-                <span asp-validation-for="Rating" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Date" class="control-label"></label>
-                <input asp-for="Date" class="form-control" />
-                <span asp-validation-for="Date" class="text-danger"></span>
-            </div>
+</head>
+<body>
+    <h1>Write A Review</h1>
 
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+    <h4>Please fill out the following information:</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group">
+                    <label asp-for="ProductId" class="control-label">Select a Candy:</label>
+                    @*<input asp-for="ProductId" class="form-control" />
+                        <span asp-validation-for="ProductId" class="text-danger"></span>*@
+                    <select name="ProductId">
+                        <option value="1">Peeps</option>
+                        <option value="2">Sour Patch Kids</option>
+                        <option value="3">Hershey's Kisses</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Reviewer" class="control-label">Name:</label>
+                    <input asp-for="Reviewer" class="form-control" />
+                    <span asp-validation-for="Reviewer" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Content" class="control-label">Review: </label>
+                    <input asp-for="Content" class="form-control" />
+                    <span asp-validation-for="Content" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Rating" class="control-label"></label>
+                    <input asp-for="Rating" class="form-control" />
+                    <span asp-validation-for="Rating" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Date" class="control-label"></label>
+                    <input asp-for="Date" class="form-control" />
+                    <span asp-validation-for="Date" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
     </div>
-</div>
 
-<div>
-    <a href="/Product/Index">Back to Candy List</a>
+    <div>
+        <a href="/Product/Index">Back to Candy List</a>
 
-    @*<a href="/Product/Details/@Model.ProductId">Back to Candy Details</a>*@
-</div>
-
-@*@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}*@
+    </div>
+</body>
+</html>
