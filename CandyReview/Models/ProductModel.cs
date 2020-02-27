@@ -13,8 +13,7 @@ namespace CandyReview.Models
 
         public string Category { get; set; }
 
-        //public string Review { get; set; }
-
+        public string Image { get; set; }
         public virtual ICollection<ReviewModel> Reviews { get; set; }
 
         public ProductModel()
@@ -22,12 +21,12 @@ namespace CandyReview.Models
 
         }
 
-        public ProductModel(int id, string name, string category) //string review)
+        public ProductModel(int id, string name, string category, string image)
         {
             Id = id;
             Name = name;
             Category = category;
-            //Review = review;
+            Image = image;
         }
     }
 

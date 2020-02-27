@@ -29,21 +29,24 @@ namespace CandyReview.Data
                 {
                     Id = 1,
                     Name = "Peeps",
-                    Category = "Marshmallow"
+                    Category = "Marshmallow",
+                    Image = "peeps.jpg"
                 },
 
                 new ProductModel()
                 {
                     Id = 2,
                     Name = "Sour Patch Kids",
-                    Category = "Sour"
+                    Category = "Sour",
+                    Image = "sourpatchkids.jpg"
                 },
 
                 new ProductModel()
                 {
                     Id = 3,
                     Name = "Hershey's Kisses",
-                    Category = "Chocolate"
+                    Category = "Chocolate",
+                    Image = "hersheykisses.jpg"
                 });
 
             modelBuilder.Entity<ReviewModel>().HasData(
