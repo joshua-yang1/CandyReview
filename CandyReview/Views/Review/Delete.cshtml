@@ -54,8 +54,9 @@
         <form asp-action="Delete">
             <input type="submit" value="Delete" class="btn btn-danger"/> |
             <input asp-for="ProductId" type="hidden" value="@Model.ProductId" />
-            <a asp-action="Index">Back to List</a>
+            @*<a asp-action="Index">Back to List</a>*@
         </form>
+        <a href="/Product/Index">Back to Candy List</a>
     </div>
 </body>
 </html>
