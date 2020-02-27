@@ -16,22 +16,21 @@
 <body>
     <div class="header-image"><h1>@Model.Name | @Model.Category</h1></div>
 
-
-
-    <div id="reviews">
     <article id="productImg">
         <img src="~/img/@Model.Image" alt="@Model.Name" />
     </article>
+
+    <div id="reviews">
         @foreach (var review in Model.Reviews)
         {
-        <article id="reviewItem">
-            <p>Name: @review.Reviewer</p>
-            <p>Review: @review.Content</p>
-            <p>Rating: @review.Rating</p>
-            <p>Date: @review.Date</p>
-            <a href="/Review/Update/@review.Id"><button>Edit Review</button></a>
-            <a href="/Review/Delete/@review.Id"><button>Delete Review</button></a>
-        </article>
+            <article id="reviewItem">
+                <p>Name: @review.Reviewer</p>
+                <p>Review: @review.Content</p>
+                <p>Rating: @review.Rating</p>
+                <p>Date: @review.Date</p>
+                <a href="/Review/Update/@review.Id"><button>Edit Review</button></a>
+                <a href="/Review/Delete/@review.Id"><button>Delete Review</button></a>
+            </article>
         }
     </div>
 

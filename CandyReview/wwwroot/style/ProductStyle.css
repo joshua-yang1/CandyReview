@@ -17,10 +17,8 @@ body {
 
 #reviews{
     align-items: center;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    max-width: 50%;
-    align-self: end;
+    max-width: 70%;
+    margin: 0 auto;
 }
 
 .header-image {
@@ -73,5 +71,7 @@ article img{
     border-radius: 25px;
 }
 #productImg {
-    width: 100%;
+    width: auto;
+    margin: 2em auto 0 auto;
+    max-width: 300px;
 }
